@@ -3,27 +3,28 @@ package DSA.arrays.easy;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MoveZerosTolast {
 
     public static void main(String args[]) throws JsonProcessingException {
         int[] array = {1,3,0,2,0,4,5,0};
-        int count = 0;
+        List<Integer> temp = Arrays.asList(1,3,0,2,0,4,5,0);
 
+        List<Integer> temp1 = new ArrayList<>();
+        List<Integer> temp2 = new ArrayList<>();
 
-//        for(int i =0;i<array.length-1;i++){
-//            if(array[i] == 0 && array[i+1] != 0){
-//                swap(array,i,i+1);
-//            }
-//            else if(array[i] == 0 && array[i+1] == 0){
-//                swap(array,i,i+2);
-//            }
-//        }
-        System.out.println(new ObjectMapper().writeValueAsString(array));
-    }
-
-    private static void swap(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+        for(int i =0;i<array.length;i++){
+           if(temp.get(i) !=0){
+               temp1.add(temp.get(i));
+           }
+           else{
+               temp2.add(temp.get(i));
+           }
+        }
+        temp1.addAll(temp2);
+        System.out.println(new ObjectMapper().writeValueAsString(temp1));
     }
 }

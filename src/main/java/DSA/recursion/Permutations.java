@@ -14,20 +14,6 @@ public class Permutations {
         permutations(str,0,str.length(),permution);
     }
 
-//    public static void permutations(String str,String permution){
-//        if(str.length() == 0){
-//            System.out.println(permution);
-//            return;
-//        }
-//
-//        for(int i =0; i< str.length();i++){
-//            char ch = str.charAt(i);
-//
-//            String newChar = str.substring(0,i)+str.substring(i+1);
-//            permutations(newChar,permution+ch);
-//        }
-//    }
-
     public static void permutations(String str, int l, int r, List<String> permution) throws JsonProcessingException {
         if(l==r){
             permution.add(str);

@@ -42,15 +42,5 @@ public class possibleSubstrings {
         return substrings;
         }
 
-
-    public static List<String> getSubstrings(String str,List<String> substrings){
-        for(int i=0; i<str.length();i++) {
-            for (int j = i+1; j < str.length()+1; j++) {
-                substrings.add(str.substring(i, j));
-            }
-        }
-        return substrings;
-    }
-
 }
 

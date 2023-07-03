@@ -8,6 +8,7 @@ public class MergeSort {
     public static void main(String args[]) throws JsonProcessingException {
         int [] array = {1,7,5,2,3};
         sort(array,0,array.length-1);
+        System.out.println(new ObjectMapper().writeValueAsString(array));
     }
 
     public static void sort(int[] array,int l,int r) throws JsonProcessingException {
@@ -30,9 +31,32 @@ public class MergeSort {
             array1[i] = array[l+i];
 
         for(int i = 0; i<n2;++i)
-            array2[i] = array[i+r+1];
+            array2[i] = array[i+mid+1];
 
-        System.out.println(new ObjectMapper().writeValueAsString(array1));
-        System.out.println(new ObjectMapper().writeValueAsString(array2));
+        int i=0,j=0,k=l;
+
+        while(i<n1 && j<n2){
+            if(array1[i] < array2[j]){
+                array[k] = array1[i];
+                i++;
+                k++;
+            }
+            else {
+                array[k] = array2[j];
+                j++;
+                k++;
+            }
+        }
+
+        while(i<n1){
+            array[k] = array1[i];
+            i++; k++;
+        }
+
+        while(j<n2){
+            array[k] = array2[j];
+            j++; k++;
+        }
+
     }
 }

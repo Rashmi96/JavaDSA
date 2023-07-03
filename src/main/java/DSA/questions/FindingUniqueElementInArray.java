@@ -7,7 +7,7 @@ public class FindingUniqueElementInArray {
 //        find that unique element.
 //        i/p: [1,2,4,3,4,2,1], o/p: 3
 //        we will solve this question using XOR
-        int[] input = {1,2,4,3,4,2,1};
+        int[] input = {1,2,4,3,5,4,2,1};
         int ans = 0;
         for(int i =0;i<input.length;i++){
             ans = ans ^ input[i];

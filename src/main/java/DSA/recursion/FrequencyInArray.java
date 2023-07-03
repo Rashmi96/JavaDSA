@@ -28,16 +28,6 @@ public class FrequencyInArray {
         System.out.println("max {}, min {}" + max + " " + min);
     }
 
-//    public static void getMaxMinFreq(Map<Integer,Integer> count, int i){
-//        if(i == array.length)
-//            return;
-//
-//        count.put(array[i],count.getOrDefault(array[i],0)+1);
-//
-//        getFrequency(array,count,i+1);
-//
-//    }
-
     public static void getFrequency(int[] array,Map<Integer,Integer> count, int i){
         if(i == array.length)
             return;
