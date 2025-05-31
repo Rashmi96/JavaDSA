@@ -1,7 +1,7 @@
 package DSA.arrays.easy;
 
 public class FindSecondMin {
-
+// Given an array of integers, find the second minimum element in the array.
     public static void main(String args[]){
         int [] arr= {2,3,4,5,1,1,0,0};
         int min= Integer.MAX_VALUE;

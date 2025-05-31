@@ -1,5 +1,5 @@
 package DSA.arrays.easy;
-
+// Given an array of integers, find the equilibrium point in the array.
 public class EquilibriumPoint {
     public static void main(String args[]){
         /*
